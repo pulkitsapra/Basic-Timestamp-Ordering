@@ -1,8 +1,4 @@
 # Pulkit Sapra, B15123 *
-# Jonty Purbia
-# Avnish Kumar
-# Pramod Jonwal
-# Group- 4 , Basic Timestamp Ordering
 
 from random import randint, choice
 from optparse import OptionParser
