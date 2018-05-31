@@ -20,13 +20,16 @@ The code iterates through all the instructions, performs the respective operatio
 eg 1:-
 OP=[[1, 'W', 0, 6, 0, 1],[0, 'W', 0, 4, 1, 1],[1, 'R', 0, 2, 1],[0, 'W', 0, 3, 3, 1],[1, 'W', 0, 7, 4, 1]]
 
-T0      |   T1
-        |
-        |   W(x)=6 
-W(x)=4  |
-        |   R(x)
-W(x)=3  |
-        |   W(x)=7
+#T0      |   T1
+#        |
+#        |   W(x)=6 
+#W(x)=4  |
+#        |   R(x)
+#W(x)=3  |
+#        |   W(x)=7
+        
+        
+w1(x)=6 , w0(x)=4, R1(x), w0(x)=3, w1(x)=7
         
        
 The output is as follows: - (Consider x to be the variable 0)
