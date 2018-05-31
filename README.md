@@ -1,5 +1,5 @@
 
-                                             BASIC TIMESTAMP ORDERING PROTOCOL
+ #                                            BASIC TIMESTAMP ORDERING PROTOCOL
                                              
 The main idea for this protocol is to order the transactions based on their Timestamps. A schedule in which the transactions participate is then serialisable and the only equivalent serial schedule permitted has the transactions in the order of their Timestamp Values. Stating simply, the schedule is equivalent to the particular Serial Order corresponding to the order of the Transaction timestamps.
 Whenever the Basic TO algorithm detects two conflicting operations occur in incorrect order, it rejects the later of the two operation by aborting the Transaction that issued it. Schedules produced by Basic TO are guaranteed to be conflict serialisable. Using Timestamp, one can ensure that our schedule will be deadlock free.
@@ -19,15 +19,6 @@ The code iterates through all the instructions, performs the respective operatio
                                               SOME SPECIFIC EXAMPLES OF SCHEDULES
 eg 1:-
 OP=[[1, 'W', 0, 6, 0, 1],[0, 'W', 0, 4, 1, 1],[1, 'R', 0, 2, 1],[0, 'W', 0, 3, 3, 1],[1, 'W', 0, 7, 4, 1]]
-
-#T0      |   T1
-#        |
-#        |   W(x)=6 
-#W(x)=4  |
-#        |   R(x)
-#W(x)=3  |
-#        |   W(x)=7
-        
         
 w1(x)=6 , w0(x)=4, R1(x), w0(x)=3, w1(x)=7
         
